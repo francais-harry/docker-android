@@ -2,7 +2,9 @@ FROM ubuntu:latest
 
 MAINTAINER francais.harry@gmail.com
 
-RUN apt-get update -y && apt-get upgrade -y && apt-get install git openjdk-8-jdk -y
+RUN apt-get update -y && apt-get upgrade -y 
+# Install library required for Android app build
+RUN apt-get install git openjdk-8-jdk -y && apt-get install lib32stdc++6 lib32z1 -y
 
 RUN mkdir -p /usr/local/android-sdk-linux
 
