@@ -1,5 +1,5 @@
 # wercker-docker-android
-Minimium docker container to build Android app on wercker environment. Docker image is availabe in DockerHub below.
+Minimum docker container to build Android app on wercker environment. Docker image is available in DockerHub below.
 https://hub.docker.com/r/francaisharry/wercker-docker-android/
 
 ## Prerequisites
@@ -12,4 +12,5 @@ https://hub.docker.com/r/francaisharry/wercker-docker-android/
 ./gradlew assembleDebug --no-daemon
 ```
 The `dependencies` task call is workaround of SDK loading issue. See https://code.google.com/p/android/issues/detail?id=212309
+
 Also it is recommended not to use gradle daemon in CI environment. https://docs.gradle.org/current/userguide/gradle_daemon.html#when_should_i_not_use_the_gradle_daemon
