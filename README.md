@@ -8,7 +8,8 @@ https://hub.docker.com/r/francaisharry/wercker-docker-android/
 
 ## How to build
 ```
-./gradlew dependencies || :
-./gradlew assembleDebug
+./gradlew dependencies --no-daemon || :
+./gradlew assembleDebug --no-daemon
 ```
 The `dependencies` task call is workaround of SDK loading issue. See https://code.google.com/p/android/issues/detail?id=212309
+Also it is recommended not to use gradle daemon in CI environment. https://docs.gradle.org/current/userguide/gradle_daemon.html#when_should_i_not_use_the_gradle_daemon
