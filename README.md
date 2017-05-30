@@ -1,10 +1,11 @@
 # wercker-docker-android
-Minimum docker container to build Android app on wercker environment. Docker image is available in DockerHub below.
+Minimum docker container to build Android app on wercker environment. This container especially aim to clean from software license point of view as much as possible. Docker image is available in DockerHub below.
 https://hub.docker.com/r/francaisharry/wercker-docker-android/
 
 ## Prerequisites
 - gradle Android plugin 2.2.+
- - Version 2.2.+ is required for auto download of the Android SDK. https://developer.android.com/studio/intro/update.html#download-with-gradle
+ - Version 2.2.+ is required for auto download of the Android SDK. Note that this container automatically accepts the license agreement of Android SDK.
+https://developer.android.com/studio/intro/update.html#download-with-gradle
 
 ## How to build
 ```
