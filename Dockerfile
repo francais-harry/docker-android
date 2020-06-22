@@ -2,6 +2,8 @@ FROM ubuntu:latest
 
 MAINTAINER francais.harry@gmail.com
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 # Install library required for Android app build
 # http://stackoverflow.com/questions/18928164/android-studio-cannot-find-aapt
 RUN apt-get update -y && apt-get upgrade -y \
