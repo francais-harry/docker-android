@@ -6,10 +6,13 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Install library required for Android app build
 # http://stackoverflow.com/questions/18928164/android-studio-cannot-find-aapt
-RUN apt-get update -y && apt-get upgrade -y \
- && apt-get install git openjdk-8-jdk -y \
- && apt-get install lib32stdc++6 lib32z1 -y \
- && apt-get clean
+RUN apt-get update -y && apt-get install -y \
+ git \
+ openjdk-8-jdk \
+ lib32stdc++6 \
+ lib32z1 \
+ && apt-get clean \
+&& rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /usr/local/android-sdk-linux
 
