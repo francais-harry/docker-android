@@ -1,6 +1,6 @@
 # docker-android
 Minimum docker container to build Android apps. This was made to use on [werkcer.com](https://app.wercker.com/) CI environment, but the container does not contain anything specific to the werker, this should work on other CI environment or on local machine. This container especially aims to clean from the software license point of view as much as possible, no deliverables from Google is included. Instead, Android build tool chain will be downloaded during the gradle build process. Note that the license agreement will be automatically accepted during the gradle build. Docker image is available in DockerHub below.
-https://hub.docker.com/repository/docker/francaisharry/docker-android
+https://hub.docker.com/r/francaisharry/docker-android
 
 ## Prerequisites
 - gradle Android plugin 2.2.+
